@@ -1,45 +1,29 @@
 import React from "react";
-import orders from "../data"
+import rows from "../data"
+import { DataGrid } from '@mui/x-data-grid';
 import logo from '../Asset/hrc.jpg'
-const head = [
-  "SlNo",
-  "Customer Order ID",
-  "Sales Org",
-  "Distribution Channel",
-  "Company Code",
-  "Order Creation Date",
-  "Order Currency",
-  "Customer Number",
-  "Amount (USD)"
+const columns = [
+  { field: 'id', headerName: 'SlNo', width: 100 },
+  { field: 'customerOrderId', headerName: 'Customer Order ID', width: 200 },
+  { field: 'salesOrg', headerName: 'Sales Org', width: 150 },
+  { field: 'distributionChannel', headerName: 'Distribution Channel', width: 200 },
+  { field: 'companyCode', headerName: 'Company Code', width: 150 },
+  { field: 'orderCreationDate', headerName: 'Order Creation Date', width: 200 },
+  { field: 'orderCurrency', headerName: 'Order Currency', width: 150 },
+  { field: 'customerNumber', headerName: 'Customer Number', width: 200 },
+  { field: 'amountUSD', headerName: 'Order Amount', width: 150 },
 ];
 
 const Table = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh",flexDirection:"column"}}>
+    <div style={{ display: "flex",justifyContent: "center", alignItems: "center", height:'100vh', flexDirection:"column" }}>
       <img src={logo} alt="hrc logo" style={{width:200,height:100,}} />
-      <table style={{ borderCollapse: "collapse", width: "100%",backgroundColor:"	#808080" }}>
-        
-        <thead>
-          <tr style={{backgroundColor:"#404040"}}>
-            {head.map((h) => {
-              return <th style={{ border: "1px solid #dddddd", padding: "8px", color:"#ffffff" }}>{h}</th>;
-            })}
-          </tr>
-        </thead>
-        <tbody>
-            {
-              orders.map((order,index)=>{
-                return(
-                  <tr key={index}>
-                    {Object.values(order).map((val,i)=>{
-                      return <td style={{ border: "1px solid #dddddd", padding: "8px",color:"#ffffff",textAlign:"center" }}>{val}</td>
-                    })}
-                  </tr>
-                )
-              })
-            }
-        </tbody>
-      </table>
+      <DataGrid
+        checkboxSelection
+        rows={rows}
+        columns={columns}
+        sx={{backgroundColor:"#808080",paddingLeft:'2.5rem',textAlign:'center'}}
+      />
     </div>
   );
 };

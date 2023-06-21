@@ -1,6 +1,6 @@
-const orders = [
+const rows = [
     {
-      SlNo: 1,
+      id: 1,
       customerOrderId: "ORD001",
       salesOrg: "SALES001",
       distributionChannel: "DIST001",
@@ -11,7 +11,7 @@ const orders = [
       amountUSD: 100.0
     },
     {
-      SlNo: 2,
+      id: 2,
       customerOrderId: "ORD002",
       salesOrg: "SALES002",
       distributionChannel: "DIST002",
@@ -22,7 +22,7 @@ const orders = [
       amountUSD: 150.0
     },
     {
-      SlNo: 3,
+      id: 3,
       customerOrderId: "ORD003",
       salesOrg: "SALES003",
       distributionChannel: "DIST001",
@@ -33,7 +33,7 @@ const orders = [
       amountUSD: 200.0
     },
     {
-      SlNo: 4,
+      id: 4,
       customerOrderId: "ORD004",
       salesOrg: "SALES001",
       distributionChannel: "DIST002",
@@ -44,7 +44,7 @@ const orders = [
       amountUSD: 120.0
     },
     {
-      SlNo: 5,
+      id: 5,
       customerOrderId: "ORD005",
       salesOrg: "SALES002",
       distributionChannel: "DIST001",
@@ -55,7 +55,7 @@ const orders = [
       amountUSD: 180.0
     },
     {
-      SlNo: 6,
+      id: 6,
       customerOrderId: "ORD006",
       salesOrg: "SALES003",
       distributionChannel: "DIST001",
@@ -66,7 +66,7 @@ const orders = [
       amountUSD: 250.0
     },
     {
-      SlNo: 7,
+      id: 7,
       customerOrderId: "ORD007",
       salesOrg: "SALES002",
       distributionChannel: "DIST002",
@@ -77,7 +77,7 @@ const orders = [
       amountUSD: 300.0
     },
     {
-      SlNo: 8,
+      id: 8,
       customerOrderId: "ORD008",
       salesOrg: "SALES001",
       distributionChannel: "DIST001",
@@ -88,7 +88,7 @@ const orders = [
       amountUSD: 175.0
     },
     {
-      SlNo: 9,
+      id: 9,
       customerOrderId: "ORD009",
       salesOrg: "SALES003",
       distributionChannel: "DIST002",
@@ -99,5 +99,5 @@ const orders = [
       amountUSD: 220.0
     }
   ];
-  export default orders;
+  export default rows;
   
